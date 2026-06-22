@@ -9,13 +9,7 @@ local options = {
 }
 
 local theme_file_contents = function()
-  local ok, contents = pcall(dofile,
-    vim.fn.expand(vim.fs.joinpath(options.omarchy_current_dir, "theme/neovim.lua")))
-  if not ok then
-    vim.notify("Omarchy theme file not found", vim.log.levels.ERROR)
-
-    return nil
-  end
+  local _, contents = pcall(dofile, vim.fn.expand(vim.fs.joinpath(options.omarchy_current_dir, "theme/neovim.lua")))
 
   return contents
 end
