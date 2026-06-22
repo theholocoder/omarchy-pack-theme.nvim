@@ -9,7 +9,10 @@ local options = {
 }
 
 local theme_file_contents = function()
-  local _, contents = pcall(dofile, vim.fn.expand(vim.fs.joinpath(options.omarchy_current_dir, "theme/neovim.lua")))
+  local ok, contents = pcall(dofile, vim.fn.expand(vim.fs.joinpath(options.omarchy_current_dir, "theme/neovim.lua")))
+  if not ok then
+    return nil
+  end
 
   return contents
 end
