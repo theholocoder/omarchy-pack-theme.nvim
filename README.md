@@ -1,6 +1,6 @@
 # Omarchy Pack Theme
 
-A Neovim plugin that automatically installs and enables the Omarchy theme, if you don't use LazyVim.
+A Neovim plugin that automatically installs and enables the Omarchy Quattro theme, if you don't use LazyVim.
 
 ## Requirements
 
@@ -20,6 +20,6 @@ You shouldn't need any configuration, but just in case here are the default valu
 ```lua
 require("omarchy-pack-theme").setup({
     -- if, for some reason, the Omarchy current theme directory is not the default one
-    omarchy_current_dir = "~/.config/omarchy/current"
+    omarchy_current_dir = "~/.local/state/omarchy/current"
 })
 ```

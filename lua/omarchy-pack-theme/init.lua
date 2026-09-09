@@ -5,7 +5,7 @@ local M = {}
 
 ---@type Options
 local options = {
-  omarchy_current_dir = "~/.config/omarchy/current"
+  omarchy_current_dir = "~/.local/state/omarchy/current"
 }
 
 local theme_file_contents = function()
